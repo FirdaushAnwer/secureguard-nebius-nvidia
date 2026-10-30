@@ -1,6 +1,8 @@
-# Sample app — contains a deliberate bug for agent demonstration
+
 def average(nums):
-    return sum(nums) / len(nums)  # BUG: crashes on empty list
+    if not nums:
+        return 0  # Handles empty list (denominator = 0)
+    return sum(nums) / len(nums)
 
 def total(nums):
     return sum(nums)
